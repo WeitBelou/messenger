@@ -23,13 +23,15 @@ repositories {
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
-    compile('org.springframework.boot:spring-boot-starter-freemarker')
-    compile('org.springframework.boot:spring-boot-starter-hateoas')
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.springframework.boot:spring-boot-starter-websocket')
+    compile('org.springframework.boot:spring-boot-starter-data-rest')
 
+    // Developer tools are automatically disabled when running a fully packaged application.
+    compile('org.springframework.boot:spring-boot-devtools')
+
+    // For data annotations
     compileOnly('org.projectlombok:lombok')
 
+    // Simple in-memory DB
     runtime('com.h2database:h2')
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
