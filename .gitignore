@@ -4,3 +4,6 @@
 !gradle-wrapper.jar
 
 /out/
+
+# React app
+node_modules
