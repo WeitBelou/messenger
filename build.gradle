@@ -39,6 +39,11 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-bootRun {
-    addResources = true
+bootRepackage {
+    withJarTask = 'jarWithoutNodeModules'
+}
+
+task jarWithoutNodeModules(type: Jar) {
+    from sourceSets.main.output
+    exclude('static/node_modules/')
 }
