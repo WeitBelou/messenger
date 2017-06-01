@@ -7,3 +7,5 @@
 
 # React client
 node_modules
+npm-*.log
+generated/

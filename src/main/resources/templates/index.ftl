@@ -9,5 +9,7 @@
 
 <div id="root"></div>
 
+<script src="/generated/client-bundle.js"></script>
+
 </body>
 </html>
