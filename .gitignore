@@ -1,11 +1,4 @@
 # Gradle
 .gradle
-/build/
+app/build/
 !gradle-wrapper.jar
-
-/out/
-
-# React client
-node_modules
-npm-*.log
-generated/

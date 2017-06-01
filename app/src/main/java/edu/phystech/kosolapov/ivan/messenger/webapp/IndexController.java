@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
 
     @RequestMapping("/")
-    public String index() {
+    public String index(@RequestHeader(name = "User-Agent") String userAgent, Model model) {
+        model.addAttribute("userAgent", userAgent);
         return "index";
     }
 }

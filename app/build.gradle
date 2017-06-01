@@ -1,18 +1,6 @@
-buildscript {
-    ext {
-        springBootVersion = '1.5.3.RELEASE'
-        springloadedVersion = '1.2.5.RELEASE'
-    }
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    }
+plugins {
+    id 'org.springframework.boot' version '1.5.3.RELEASE'
 }
-
-apply plugin: 'java'
-apply plugin: 'org.springframework.boot'
 
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
@@ -23,12 +11,18 @@ repositories {
 
 
 dependencies {
+    // Spring components
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-starter-data-rest')
     compile('org.springframework.boot:spring-boot-starter-freemarker')
 
     // Developer tools are automatically disabled when running a fully packaged application.
     compile('org.springframework.boot:spring-boot-devtools')
+
+    // Webjars
+    compile('org.webjars:webjars-locator:0.32-1')
+    compile('org.webjars:Semantic-UI:2.2.10')
+    compile('org.webjars:jquery:3.2.0')
 
     // For data annotations
     compileOnly('org.projectlombok:lombok')
@@ -39,11 +33,6 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-bootRepackage {
-    withJarTask = 'jarWithoutNodeModules'
-}
-
-task jarWithoutNodeModules(type: Jar) {
-    from sourceSets.main.output
-    exclude('static/node_modules/')
+bootRun {
+    addResources = true
 }
