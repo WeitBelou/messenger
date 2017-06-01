@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class HomeController {
+public class IndexController {
 
-    @RequestMapping("/home")
-    public String home(@RequestHeader(name = "User-Agent") String userAgent, Model model) {
-        model.addAttribute("userAgent", userAgent);
-        return "home";
+    @RequestMapping("/")
+    public String index() {
+        return "index";
     }
 }

@@ -2,12 +2,12 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Home</title>
+  <title>Messenger</title>
 </head>
 
 <body>
 
-<h3>Hello, "${userAgent}" user.</h3>
+<div id="root"></div>
 
 </body>
 </html>
