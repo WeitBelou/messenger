@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Messenger</title>
 
-  <link rel="stylesheet" href="/webjars/Semantic-UI/semantic.min.css">
+  <link rel="stylesheet" href="webjars/Semantic-UI/semantic.min.css">
 </head>
 
 <body>
@@ -13,8 +13,8 @@
   <h2>Hello "${userAgent}"!</h2>
 </div>
 
-<script src="/webjars/jquery/jquery.min.js"></script>
-<script src="/webjars/Semantic-UI/semantic.min.js"></script>
+<script src="webjars/jquery/jquery.min.js"></script>
+<script src="webjars/Semantic-UI/semantic.min.js"></script>
 
 </body>
 </html>
