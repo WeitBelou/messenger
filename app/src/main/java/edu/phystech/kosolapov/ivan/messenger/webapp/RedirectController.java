@@ -3,14 +3,14 @@ package edu.phystech.kosolapov.ivan.messenger.webapp;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.view.RedirectView;
 
-@RequestMapping("/home")
 @Controller
-public class HomeController {
+@RequestMapping("/")
+public class RedirectController {
 
     @GetMapping
-    public String index() {
-        return "index";
+    public RedirectView redirectToHome() {
+        return new RedirectView("home");
     }
 }
