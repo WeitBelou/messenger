@@ -11,10 +11,30 @@
 
 <#macro page>
 
-<div class="ui feed">
-  <#list messages as message>
+<div class="ui segments container">
+
+  <div class="ui segment">
+    <form class="ui form" method="post" action="">
+      <div class="field">
+        <label>Автор</label>
+        <input type="text" name="author" placeholder="Ваше имя...">
+      </div>
+
+      <div class="field">
+        <label>Сообщение</label>
+        <input type="text" name="content" placeholder="Текст сообщения...">
+      </div>
+
+      <button class="ui button" type="submit">Отправить</button>
+    </form>
+  </div>
+
+  <div class="ui feed segment">
+    <#list messages as message>
     <@showMessage message />
   </#list>
+
+  </div>
 
 </div>
 
