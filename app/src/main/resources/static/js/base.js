@@ -17,4 +17,6 @@ $(function () {
       },
     }
   })
+
+  $('#messages-container').load('/ajax/messages')
 })

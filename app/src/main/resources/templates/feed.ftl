@@ -16,31 +16,9 @@
 
   <@forms.messageForm/>
 
-  <div class="ui feed segment">
-    <#list messages as message>
-    <@showMessage message />
-  </#list>
-
+  <div id="messages-container" class="ui feed segment">
   </div>
 
 </div>
 
-</#macro>
-
-<#macro showMessage message>
-<div class="event">
-
-  <div class="label">
-
-  </div>
-
-  <div class="content">
-    <div class="summary">
-      <a class="user"> ${message.author} </a>
-    ${message.content}
-      <div class="date">${message.updatedAt}</div>
-    </div>
-  </div>
-
-</div>
 </#macro>
