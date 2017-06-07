@@ -6,24 +6,56 @@
   <meta charset="UTF-8">
   <title>Messenger</title>
 
-  <link rel="stylesheet" href="webjars/Semantic-UI/semantic.min.css">
-    <#list customStylesheets as stylesheet>
-      <link rel="stylesheet" href="${stylesheet}">
-    </#list>
+  <link rel="stylesheet" href="/webjars/Semantic-UI/semantic.min.css">
+
+<#--Custom stylesheets-->
+  <#list customStylesheets as stylesheet>
+    <link rel="stylesheet" href="${stylesheet}">
+  </#list>
+
 </head>
 
 <body>
 
-    <#nested>
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/Semantic-UI/semantic.min.js"></script>
 
-<script src="webjars/jquery/jquery.min.js"></script>
-<script src="webjars/Semantic-UI/semantic.min.js"></script>
+  <#nested>
 
-    <#list customScripts as script>
-    <script src="${script}"></script>
-    </#list>
+<#--Custom js files-->
+  <#list customScripts as script>
+  <script src="${script}"></script>
+  </#list>
 
 </body>
 </html>
 
+</#macro>
+
+<#macro menu current="home">
+  <#assign
+  menuItems = {
+  "home": "Домашняя страница",
+  "feed": "Лента",
+  "chats": "Чаты"
+  }>
+
+<div class="ui large top fixed menu">
+  <div class="ui container">
+
+    <#list menuItems?keys as key>
+      <a class="<#if key == current>active </#if>item">${menuItems[key]}</a>
+    </#list>
+
+    <div class="right menu">
+      <div class="item">
+        <a class="ui button">Вход</a>
+      </div>
+      <div class="item">
+        <a class="ui primary button">Регистрация</a>
+      </div>
+    </div>
+
+  </div>
+</div>
 </#macro>
