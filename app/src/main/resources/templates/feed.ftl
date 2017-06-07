@@ -1,3 +1,4 @@
+<#-- @ftlvariable name="messages" type="Iterable<Message>" -->
 <#import "base.ftl" as base>
 
 <@base.wrapper>
@@ -11,19 +12,9 @@
 <#macro page>
 
 <div class="ui feed">
-
-<#--Test data-->
-<#assign
-messages = [
-{"author": "Mr. Sir", "content": "Hi there!", "updatedAt": "12.12.12"},
-{"author": "Mr. Sir", "content": "Hi there!", "updatedAt": "12.12.12"},
-{"author": "Mr. Sir", "content": "Hi there!", "updatedAt": "12.12.12"}
-]
->
-
   <#list messages as message>
-  <@showMessage message />
-</#list>
+    <@showMessage message />
+  </#list>
 
 </div>
 
