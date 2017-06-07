@@ -11,9 +11,7 @@
 
 <body>
 
-<div class="ui container">
     <#nested>
-</div>
 
 <script src="webjars/jquery/jquery.min.js"></script>
 <script src="webjars/Semantic-UI/semantic.min.js"></script>
