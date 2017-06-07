@@ -35,16 +35,17 @@
 <#macro menu current="home">
   <#assign
   menuItems = {
-  "home": "Домашняя страница",
-  "feed": "Лента",
-  "chats": "Чаты"
+  "home": {"verbose": "Домашняя страница", "link": "/home"},
+  "feed": {"verbose": "Лента", "link": "/feed"},
+  "chats": {"verbose": "Чаты", "link": "/chats"}
   }>
 
 <div class="ui large top pointing menu">
   <div class="ui container">
 
     <#list menuItems?keys as key>
-      <a class="<#if key == current>active </#if>item">${menuItems[key]}</a>
+      <a class="<#if key == current>active </#if>item" href="${menuItems[key].link}">
+      ${menuItems[key].verbose}</a>
     </#list>
 
     <div class="right menu">
@@ -61,5 +62,5 @@
 </#macro>
 
 <#macro footer>
-  
+
 </#macro>
