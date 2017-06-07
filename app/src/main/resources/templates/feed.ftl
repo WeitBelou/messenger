@@ -1,5 +1,5 @@
 <#-- @ftlvariable name="messages" type="Iterable<Message>" -->
-<#import "base.ftl" as base>
+<#import "lib/base.ftl" as base>
 <#import "lib/forms.ftl" as forms>
 
 <@base.wrapper>

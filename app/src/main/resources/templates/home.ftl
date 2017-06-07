@@ -1,4 +1,4 @@
-<#import "base.ftl" as base>
+<#import "lib/base.ftl" as base>
 
 <@base.wrapper>
 
