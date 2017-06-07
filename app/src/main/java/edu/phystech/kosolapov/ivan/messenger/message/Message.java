@@ -3,6 +3,7 @@ package edu.phystech.kosolapov.ivan.messenger.message;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -14,8 +15,10 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotEmpty
     private String author;
 
+    @NotEmpty
     private String content;
 
     @CreationTimestamp
