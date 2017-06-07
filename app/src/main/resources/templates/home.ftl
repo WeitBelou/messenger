@@ -1,6 +1,6 @@
 <#import "base.ftl" as base>
 
-<@base.wrapper customScripts=["/js/home.js"] customStylesheets=['/css/home.css']>
+<@base.wrapper>
 
   <@base.menu current="home"/>
   <@page/>
