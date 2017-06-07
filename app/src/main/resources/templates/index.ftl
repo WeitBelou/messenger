@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Messenger</title>
+<#import "base.ftl" as base>
 
-  <link rel="stylesheet" href="webjars/Semantic-UI/semantic.min.css">
-</head>
+<@base.container>
 
-<body>
+<h2 class="ui header">Hello, ${userAgent}</h2>
 
-<div class="ui container">
-  <h2>Hello "${userAgent}"!</h2>
-</div>
-
-<script src="webjars/jquery/jquery.min.js"></script>
-<script src="webjars/Semantic-UI/semantic.min.js"></script>
-
-</body>
-</html>
+</@base.container>
