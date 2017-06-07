@@ -12,7 +12,7 @@
 
   <div class="content">
     <div class="summary">
-      <a class="user"> ${message.message} </a>
+      <a class="user"> ${message.author} </a>
     ${message.content}
       <div class="date">${message.updatedAt}</div>
     </div>
