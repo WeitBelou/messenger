@@ -40,7 +40,7 @@
   "chats": "Чаты"
   }>
 
-<div class="ui large top fixed menu">
+<div class="ui large top pointing menu">
   <div class="ui container">
 
     <#list menuItems?keys as key>
@@ -58,4 +58,8 @@
 
   </div>
 </div>
+</#macro>
+
+<#macro footer>
+  
 </#macro>
