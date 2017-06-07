@@ -1,4 +1,4 @@
-package edu.phystech.kosolapov.ivan.messenger.webapp;
+package edu.phystech.kosolapov.ivan.messenger.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
