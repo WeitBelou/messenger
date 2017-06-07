@@ -1,5 +1,6 @@
 <#-- @ftlvariable name="messages" type="Iterable<Message>" -->
 <#import "base.ftl" as base>
+<#import "lib/forms.ftl" as forms>
 
 <@base.wrapper>
 
@@ -14,19 +15,7 @@
 <div class="ui segments container">
 
   <div class="ui segment">
-    <form class="ui form" method="post" action="">
-      <div class="field">
-        <label>Автор</label>
-        <input type="text" name="author" placeholder="Ваше имя...">
-      </div>
-
-      <div class="field">
-        <label>Сообщение</label>
-        <input type="text" name="content" placeholder="Текст сообщения...">
-      </div>
-
-      <button class="ui button" type="submit">Отправить</button>
-    </form>
+    <@forms.messageForm/>
   </div>
 
   <div class="ui feed segment">
