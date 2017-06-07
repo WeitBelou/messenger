@@ -19,6 +19,7 @@
 
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/Semantic-UI/semantic.min.js"></script>
+<script src="/js/base.js"></script>
 
   <#nested>
 

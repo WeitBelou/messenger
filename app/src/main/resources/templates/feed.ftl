@@ -14,9 +14,7 @@
 
 <div class="ui segments container">
 
-  <div class="ui segment">
-    <@forms.messageForm/>
-  </div>
+  <@forms.messageForm/>
 
   <div class="ui feed segment">
     <#list messages as message>
