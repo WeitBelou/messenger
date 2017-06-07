@@ -2,3 +2,10 @@ spring:
   data:
     rest:
       base-path: /api
+  datasource:
+    url: jdbc:postgresql://localhost:5432/messenger
+    username: messenger
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update

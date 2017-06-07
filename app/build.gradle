@@ -25,11 +25,10 @@ dependencies {
     compile('org.webjars:Semantic-UI:2.2.10')
     compile('org.webjars:jquery:3.2.0')
 
+    compile('org.postgresql:postgresql:9.4-1206-jdbc42')
+
     // For data annotations
     compileOnly('org.projectlombok:lombok')
-
-    // Simple in-memory DB
-    runtime('com.h2database:h2')
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
