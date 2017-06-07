@@ -1,7 +1,9 @@
 <#import "base.ftl" as base>
 
-<@base.container>
+<@base.wrapper>
 
-<h2 class="ui header">Hello, ${userAgent}</h2>
+<div class="ui container">
+  <h2 class="ui header">Hello, ${userAgent}</h2>
+</div>
 
-</@base.container>
+</@base.wrapper>
