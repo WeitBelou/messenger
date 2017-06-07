@@ -35,4 +35,5 @@ dependencies {
 
 bootRun {
     addResources = true
+    args = ['--spring.profiles.active=dev']
 }
