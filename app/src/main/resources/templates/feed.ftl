@@ -10,4 +10,39 @@
 
 <#macro page>
 
+<div class="ui feed">
+
+<#--Test data-->
+<#assign
+messages = [
+{"author": "Mr. Sir", "content": "Hi there!", "updatedAt": "12.12.12"},
+{"author": "Mr. Sir", "content": "Hi there!", "updatedAt": "12.12.12"},
+{"author": "Mr. Sir", "content": "Hi there!", "updatedAt": "12.12.12"}
+]
+>
+
+  <#list messages as message>
+  <@showMessage message />
+</#list>
+
+</div>
+
+</#macro>
+
+<#macro showMessage message>
+<div class="event">
+
+  <div class="label">
+
+  </div>
+
+  <div class="content">
+    <div class="summary">
+      <a class="user"> ${message.author} </a>
+    ${message.content}
+      <div class="date">${message.updatedAt}</div>
+    </div>
+  </div>
+
+</div>
 </#macro>
