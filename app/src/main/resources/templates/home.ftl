@@ -16,7 +16,9 @@
 
       <h2>Java Messenger для Технотрека</h2>
 
-      <a class="ui huge primary button">Лента<i class="right arrow icon"></i></a>
+      <#--TODO: Workaround-->
+      <a class="ui huge primary button" href="${base.menuItems[1].link}">
+        Лента<i class="right arrow icon"></i></a>
     </div>
   </div>
 </div>

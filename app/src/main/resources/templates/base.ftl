@@ -34,18 +34,18 @@
 
 <#macro menu current="home">
   <#assign
-  menuItems = {
-  "home": {"verbose": "Домашняя страница", "link": "/home"},
-  "feed": {"verbose": "Лента", "link": "/feed"},
-  "chats": {"verbose": "Чаты", "link": "/chats"}
-  }>
+  menuItems = [
+  {"name": "home", "verbose": "Домашняя страница", "link": "/home"},
+  {"name": "feed", "verbose": "Лента", "link": "/feed"},
+  {"name": "chats", "verbose": "Чаты", "link": "/chats"}
+  ]>
 
 <div class="ui large top pointing menu">
   <div class="ui container">
 
-    <#list menuItems?keys as key>
-      <a class="<#if key == current>active </#if>item" href="${menuItems[key].link}">
-      ${menuItems[key].verbose}</a>
+    <#list menuItems as menuItem>
+      <a class="<#if menuItem.name == current>active </#if>item" href="${menuItem.link}">
+      ${menuItem.verbose}</a>
     </#list>
 
     <div class="right menu">
