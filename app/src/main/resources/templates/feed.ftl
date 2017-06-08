@@ -26,7 +26,7 @@
 
 <#macro messageForm message>
 
-<form id="message-form" class="ui form segment message-form error" method="post" action="">
+<form id="message-form" class="ui form segment message-form" method="post" action="">
 
   <div class="field">
     <label>Автор</label>
@@ -42,11 +42,17 @@
 
   <button class="ui submit button">Отправить</button>
 
-  <#if spring.status.errorMessages?has_content>
-    <div class="ui error message">
+
+  <div class="ui success message">
+    <div class="header">Сообщение добавлено!</div>
+  </div>
+
+  <div class="ui error message">
+    <#if spring.status.errorMessages?has_content>
+
       <#list spring.status.errorMessages as error>
         <div>${error}</div></#list>
-    </div>
-  </#if>
+    </#if>
+  </div>
 </form>
 </#macro>
