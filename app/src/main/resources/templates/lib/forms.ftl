@@ -1,5 +1,5 @@
 <#macro messageForm>
-<form class="ui form segment message-form error" method="post" action="">
+<form id="message-form" class="ui form segment message-form error" method="post" action="">
   <div class="field">
     <label>Автор</label>
     <input name="author" placeholder="Ваше имя...">

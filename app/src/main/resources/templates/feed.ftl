@@ -2,7 +2,7 @@
 <#import "lib/base.ftl" as base>
 <#import "lib/forms.ftl" as forms>
 
-<@base.wrapper>
+<@base.wrapper customScripts=["/js/feed.js"]>
 
   <@base.menu current="feed"/>
   <@page/>
