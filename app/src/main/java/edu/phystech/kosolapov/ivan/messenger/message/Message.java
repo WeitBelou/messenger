@@ -1,5 +1,6 @@
 package edu.phystech.kosolapov.ivan.messenger.message;
 
+import edu.phystech.kosolapov.ivan.messenger.users.User;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -15,8 +16,9 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotEmpty
-    private String author;
+    @ManyToOne
+    @JoinColumn(name = "author_id", nullable = false)
+    private User author;
 
     @NotEmpty
     private String content;
