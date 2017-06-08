@@ -1,4 +1,6 @@
 $(function () {
+  $('#messages-container').load('/ajax/messages')
+
   $('#message-form').form({
     fields: {
       author: {
@@ -17,6 +19,4 @@ $(function () {
       },
     }
   })
-
-  $('#messages-container').load('/ajax/messages')
 })
