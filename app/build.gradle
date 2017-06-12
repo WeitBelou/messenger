@@ -1,5 +1,16 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath('org.springframework:springloaded:1.2.6.RELEASE')
+    }
+}
+
 plugins {
     id 'org.springframework.boot' version '1.5.3.RELEASE'
+    id 'idea'
 }
 
 version = '0.0.1-SNAPSHOT'
