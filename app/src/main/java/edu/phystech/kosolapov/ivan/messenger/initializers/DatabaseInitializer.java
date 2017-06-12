@@ -33,6 +33,7 @@ public class DatabaseInitializer implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
         Chat chat = new Chat();
+        chat.setTitle("Awesome chat");
         chatRepository.save(chat);
 
         User user = new User();
