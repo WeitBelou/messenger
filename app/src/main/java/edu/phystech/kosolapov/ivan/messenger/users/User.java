@@ -1,6 +1,6 @@
 package edu.phystech.kosolapov.ivan.messenger.users;
 
-import edu.phystech.kosolapov.ivan.messenger.message.Message;
+import edu.phystech.kosolapov.ivan.messenger.messages.Message;
 import lombok.Data;
 
 import javax.persistence.*;

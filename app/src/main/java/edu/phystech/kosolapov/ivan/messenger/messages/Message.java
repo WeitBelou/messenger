@@ -1,4 +1,4 @@
-package edu.phystech.kosolapov.ivan.messenger.message;
+package edu.phystech.kosolapov.ivan.messenger.messages;
 
 import edu.phystech.kosolapov.ivan.messenger.users.User;
 import lombok.Data;

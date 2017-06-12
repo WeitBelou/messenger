@@ -1,7 +1,7 @@
 package edu.phystech.kosolapov.ivan.messenger.initializers;
 
-import edu.phystech.kosolapov.ivan.messenger.message.Message;
-import edu.phystech.kosolapov.ivan.messenger.message.MessageRepository;
+import edu.phystech.kosolapov.ivan.messenger.messages.Message;
+import edu.phystech.kosolapov.ivan.messenger.messages.MessageRepository;
 import edu.phystech.kosolapov.ivan.messenger.users.User;
 import edu.phystech.kosolapov.ivan.messenger.users.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,7 @@ public class DatabaseInitializer implements CommandLineRunner {
 
         Message message = new Message();
         message.setAuthor(user);
-        message.setContent("My first message");
+        message.setContent("My first messages");
 
         messageRepository.save(message);
     }
