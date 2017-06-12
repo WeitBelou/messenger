@@ -1,5 +1,6 @@
 package edu.phystech.kosolapov.ivan.messenger.users;
 
+import edu.phystech.kosolapov.ivan.messenger.chats.Chat;
 import edu.phystech.kosolapov.ivan.messenger.messages.Message;
 import lombok.Data;
 
@@ -18,6 +19,10 @@ public class User {
     private String username;
 
     private String password;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    private List<Chat> chats;
+
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "author")
     private List<Message> messages;
