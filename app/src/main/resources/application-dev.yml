@@ -4,6 +4,8 @@ spring:
     username: messenger
     password: password
   jpa:
-
     hibernate:
       ddl-auto: update
+  data:
+    rest:
+      base-path: /api
