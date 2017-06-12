@@ -4,7 +4,7 @@ import edu.phystech.kosolapov.ivan.messenger.message.Message;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 @Data
 @Entity(name = "users")
@@ -19,6 +19,6 @@ public class User {
 
     private String password;
 
-    @OneToMany(mappedBy = "author")
-    private Set<Message> messages;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "author")
+    private List<Message> messages;
 }
