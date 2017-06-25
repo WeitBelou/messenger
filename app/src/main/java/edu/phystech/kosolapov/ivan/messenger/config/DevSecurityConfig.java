@@ -11,8 +11,8 @@ public class DevSecurityConfig extends WebSecurityConfigurerAdapter {
 
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/static/**").permitAll()
-                .antMatchers("/*").authenticated()
+                .antMatchers("/static/**", "/signup").permitAll()
+                .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/login").permitAll();
     }
