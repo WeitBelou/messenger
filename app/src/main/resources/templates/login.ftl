@@ -47,6 +47,8 @@
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="/webjars/Semantic-UI/semantic.min.js"></script>
+
+<script src="/static/javascript/login.js"></script>
 </body>
 
 </html>
