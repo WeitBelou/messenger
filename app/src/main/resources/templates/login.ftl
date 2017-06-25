@@ -1,6 +1,7 @@
 <#assign titleBase='Java Messenger'>
 <#assign title='${titleBase} | Login'>
 <#assign loginPrompt='Log-in to your account'>
+<#assign signupPrompt='New to us?'>
 
 <!DOCTYPE html>
 <html>
@@ -39,7 +40,7 @@
     </form>
 
     <div class="ui message">
-      New to us?
+    ${signupPrompt}
       <a href="/signup">Sign Up</a>
     </div>
   </div>
