@@ -8,12 +8,14 @@ import edu.phystech.kosolapov.ivan.messenger.users.User;
 import edu.phystech.kosolapov.ivan.messenger.users.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.util.Collections;
 import java.util.List;
 
 @Component
+@Profile("dev")
 public class DatabaseInitializer implements CommandLineRunner {
 
     private final MessageRepository messageRepository;
