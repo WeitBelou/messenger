@@ -10,6 +10,10 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class DevSecurityConfig extends WebSecurityConfigurerAdapter {
 
     public void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/**").permitAll();
+        http.authorizeRequests()
+                .antMatchers("/static/**").permitAll()
+                .antMatchers("/*").authenticated()
+                .and()
+                .formLogin().loginPage("/login").permitAll();
     }
 }
